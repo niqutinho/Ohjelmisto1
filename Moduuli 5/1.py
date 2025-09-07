@@ -6,7 +6,7 @@ noppa=int(input("Kuinka monta noppaa?: "))
 summa=0
 
 for i in range(noppa):
-    heitto=random.randint(1,3)
+    heitto=random.randint(1,6)
     print(f"Noppa {i+1}: {heitto}")
     summa+=heitto
 
