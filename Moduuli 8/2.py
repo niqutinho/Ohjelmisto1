@@ -7,7 +7,7 @@ def get_airports_by_country(country_code):
         port=3306,
         database="flight_game",
         user="root",
-        password="root",
+        password="0368",
         autocommit=True
     )
 
