@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice</title>
+</head>
+<body>
+
+<script>
+    let dice = parseInt(prompt("How many dice?"));
+    let target = parseInt(prompt("What sum do you want?"));
+
+    let trials = 100000;        // 100,000 rolls = good accuracy
+    let success = 0;
+
+    for (let i = 0; i < trials; i++) {
+        let sum = 0;
+        for (let d = 0; d < dice; d++) {
+            sum += Math.floor(Math.random() * 6) + 1;
+        }
+        if (sum === target) success++;
+    }
+
+    let probability = (success / trials) * 100;
+
+    document.write("Probability to get sum " + target +
+                   " with " + dice + " dice is " +
+                   probability.toFixed(2) + "%");
+</script>
+
+</body>
+</html>
